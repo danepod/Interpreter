@@ -24,6 +24,8 @@ public class Interpreter {
     public Interpreter(int memory[], int starting_address) {
         PC = starting_address;
         interpret(memory, starting_address);
+
+        System.out.print("Result: " + this.AC);
     }
 
     /* This procedure interprets programs for a simple machine with
@@ -53,9 +55,7 @@ public class Interpreter {
     }
 
     private int get_instr_type(int addr) {
-        int[] result = {OP_HALT, OP_ADD, OP_NEGATE};
-
-        return result[addr];
+        return addr;
     }
 
     private int find_data(int instr, int type) {

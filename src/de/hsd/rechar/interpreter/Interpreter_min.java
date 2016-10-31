@@ -20,6 +20,8 @@ public class Interpreter_min {
     public Interpreter_min(int mem[]) {
         this.memory = mem;
         run(memory);
+
+        System.out.print("Result: " + this.AC);
     }
 
     private void run(int[] memory) {
@@ -47,39 +49,3 @@ public class Interpreter_min {
         }
     }
 }
-
-/*
-run() {
-
-    while running {
-
-        instr = memory[pc];
-        pc++;
-
-        execute(instr)
-
-    }
-
-}
-
-execute(instr) {
-
-    switch instr {
-        case OP_HALT;
-            running = false;
-            break
-
-        case OP_ADD;
-            imemdiate = memory[pc] ;
-            pc++;
-            ac = ac + imemdiate;
-            break
-
-        case OP_NEGATE:
-            ac = ~ac;
-            break;
-
-    }
-
-}
- */
